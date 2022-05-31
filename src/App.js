@@ -1,16 +1,18 @@
 import Person from "./components/Person";
 import Hero from "./components/Hero/Hero";
 import Increment from "./components/Increment/Increment";
+import User from "./components/user/User";
 function App() {
   return (
     <div className="App">
-      <MyFunc name='Hamim' profession='Designer'></MyFunc>
+      {/* <MyFunc name='Hamim' profession='Designer'></MyFunc>
       <MyFunc name='Ahamed' profession='Graphics'></MyFunc>
       <MyFunc name='Farjana' profession='Developer'></MyFunc>
       <MyFunc name='Ahanan' profession='Developer'></MyFunc>
       <Person></Person>
       <Hero></Hero>
-      <Increment/>
+      <Increment/> */}
+      <User></User>
     </div>
   );
 }
