@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Person from "./components/Person";
+import Hero from "./components/Hero/Hero";
+import Increment from "./components/Increment/Increment";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MyFunc name='Hamim' profession='Designer'></MyFunc>
+      <MyFunc name='Ahamed' profession='Graphics'></MyFunc>
+      <MyFunc name='Farjana' profession='Developer'></MyFunc>
+      <MyFunc name='Ahanan' profession='Developer'></MyFunc>
+      <Person></Person>
+      <Hero></Hero>
+      <Increment/>
     </div>
   );
+}
+
+const personStyle = {
+  backgroundColor: 'green',
+  border: '2px solid #ddd',
+  padding: '30px',
+  display: 'inline-Block',
+  width: '33.33%',
+  margin: 'auto',
+  boxSizing: 'border-box'
+}
+function MyFunc(props){
+  return(
+    <div className='personStyle' style={personStyle}>
+      <h3>My Name is : {props.name}</h3>
+      <h4>{props.profession}</h4>
+      <button style={{display:'inline-block',padding: '10px 30px',textTransform:'capitalize',cursor: 'pointer'}}>add points</button>
+    </div>
+  )
 }
 
 export default App;
